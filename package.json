@@ -1,0 +1,18 @@
+{
+  "name": "tebaktebakan",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Website Tebak-tebakan",
+  "repository": "",
+  "author": "Eko Prasetyo; Hans",
+  "devDependencies": {
+    "grunt": "^0.4.1",
+    "node-compass": "~0.2.3",
+    "compass": "~0.1.0",
+    "grunt-contrib-compass": "~0.6.0",
+    "grunt-closure-compiler": "~0.0.18",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-cssmin": "0.4.1",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

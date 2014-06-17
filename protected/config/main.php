@@ -8,6 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'E-Health Knowledge System',
+    'language' => 'id',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -36,6 +37,11 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+//        'user' => array(
+//            'class' => 'WebUser',
+//            // enable cookie-based authentication
+//            'allowAutoLogin' => true,
+//        ),
 		// uncomment the following to enable URLs in path-format
 		'urlManager'=>array(
 			'urlFormat'=>'path',
@@ -83,8 +89,15 @@ return array(
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
-	'params'=>array(
+	'params' => array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail' => 'admin@admin-health.com',
+		'phpass' => array(
+			'iteration_count_log2' => 11,
+			'portable_hashes' => false,
+		),
+		'authSession' => array(
+			'timeOutAfterInActive' => 1800,
+		),
 	),
 );

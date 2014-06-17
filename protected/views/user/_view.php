@@ -13,10 +13,6 @@
 	<?php echo CHtml::encode($data->nomor_sip); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
-	<?php echo CHtml::encode($data->password); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nama')); ?>:</b>
 	<?php echo CHtml::encode($data->nama); ?>
 	<br />
@@ -30,7 +26,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('role')); ?>:</b>
-	<?php echo CHtml::encode($data->role); ?>
+	<?php echo CHtml::encode($data->printRole); ?>
 	<br />
 
 

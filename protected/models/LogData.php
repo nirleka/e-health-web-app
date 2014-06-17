@@ -1,25 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "obat".
+ * This is the model class for table "log_data".
  *
- * The followings are the available columns in table 'obat':
+ * The followings are the available columns in table 'log_data':
  * @property string $id
- * @property string $nama
- * @property string $keterangan
- * @property string $dosis
+ * @property string $stamp
+ * @property string $log_act
+ * @property string $id_user
  *
  * The followings are the available model relations:
- * @property Penyakit[] $penyakits
+ * @property User $idUser
  */
-class Obat extends EhealthActiveRecord
+class LogData extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'obat';
+		return 'log_data';
 	}
 
 	/**
@@ -30,12 +30,11 @@ class Obat extends EhealthActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, nama, keterangan, dosis', 'required'),
-			array('id', 'length', 'max'=>20),
-			array('nama', 'length', 'max'=>100),
+			array('log_act, id_user', 'required'),
+			array('id_user', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, nama, keterangan, dosis', 'safe', 'on'=>'search'),
+			array('id, stamp, log_act, id_user', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -47,7 +46,7 @@ class Obat extends EhealthActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'penyakits' => array(self::MANY_MANY, 'Penyakit', 'penyakit_has_obat(id_obat, id_penyakit)'),
+			'idUser' => array(self::BELONGS_TO, 'User', 'id_user'),
 		);
 	}
 
@@ -58,9 +57,9 @@ class Obat extends EhealthActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'nama' => 'Nama',
-			'keterangan' => 'Keterangan',
-			'dosis' => 'Dosis',
+			'stamp' => 'Stamp',
+			'log_act' => 'Log Act',
+			'id_user' => 'Id User',
 		);
 	}
 
@@ -83,9 +82,9 @@ class Obat extends EhealthActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
-		$criteria->compare('nama',$this->nama,true);
-		$criteria->compare('keterangan',$this->keterangan,true);
-		$criteria->compare('dosis',$this->dosis,true);
+		$criteria->compare('stamp',$this->stamp,true);
+		$criteria->compare('log_act',$this->log_act,true);
+		$criteria->compare('id_user',$this->id_user,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -96,7 +95,7 @@ class Obat extends EhealthActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Obat the static model class
+	 * @return LogData the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

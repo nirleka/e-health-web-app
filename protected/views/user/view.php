@@ -23,10 +23,13 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'nomor_sip',
-		'password',
 		'nama',
 		'lokasi_penugasan',
 		'no_telp',
-		'role',
+        array(
+            'name' => 'role',
+            'type' => 'raw',
+            'value' => $model->printRole()
+        )
 	),
 )); ?>

@@ -13,7 +13,7 @@
  * The followings are the available model relations:
  * @property Obat[] $obats
  */
-class Penyakit extends CActiveRecord
+class Penyakit extends EhealthActiveRecord
 {
 	/**
 	 * @return string the associated database table name

@@ -8,11 +8,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'user-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation'=>true,
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -25,10 +21,24 @@
 		<?php echo $form->error($model,'nomor_sip'); ?>
 	</div>
 
+    <?php if (!$model->isNewRecord): ?>
+    <div class="row">
+		<?php echo $form->labelEx($model,'password_lama'); ?>
+		<?php echo $form->passwordField($model,'password_lama',array('size'=>50,'maxlength'=>50, 'value' => '')); ?>
+		<?php echo $form->error($model,'password_lama'); ?>
+	</div>
+    <?php endif; ?>
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->passwordField($model,'password', array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'password'); ?>
+	</div>
+
+    <div class="row">
+		<?php echo $form->labelEx($model,'password_repeat'); ?>
+		<?php echo $form->passwordField($model,'password_repeat',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->error($model,'password_repeat'); ?>
 	</div>
 
 	<div class="row">
@@ -51,12 +61,12 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'role'); ?>
-		<?php echo $form->textField($model,'role',array('size'=>1,'maxlength'=>1)); ?>
+		<?php echo $form->dropDownList($model,'role', array("1" => "User", "0" => "Admin")); ?>
 		<?php echo $form->error($model,'role'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Simpan' : 'Ubah'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

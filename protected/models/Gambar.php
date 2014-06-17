@@ -12,7 +12,7 @@
  * The followings are the available model relations:
  * @property Penyakit $idPenyakit
  */
-class Gambar extends CActiveRecord
+class Gambar extends EhealthActiveRecord
 {
 	/**
 	 * @return string the associated database table name

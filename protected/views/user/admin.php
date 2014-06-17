@@ -22,10 +22,13 @@ $this->menu=array(
 	'columns'=>array(
 		'id',
 		'nomor_sip',
-		'password',
 		'nama',
 		'lokasi_penugasan',
 		'no_telp',
+        array(
+            'name' => 'role',
+            'value' => '$data->printRole()'
+        ),
 		/*
 		'role',
 		*/
