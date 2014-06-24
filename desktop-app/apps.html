@@ -123,7 +123,7 @@
 
 								<!-- email lists -->
 								<div class="dropdown-menu toolbar pull-right">
-									<h3>Inbox</h3>
+									<h3>Notifikasi</h3>
 									<ul id="mailbox-slimscroll-js" class="mailbox">
 										<li>
 											<a href="javascript:void(0)" class="unread">
@@ -169,7 +169,7 @@
 										<li>
 											<a href="javascript:void(0)" class="read">
 												<img src="img/email-read.png" alt="important mail" />
-												Welcome to Jarvis!
+												Selamat Datang to Jarvis!
 												<i class="icon-paper-clip"></i>
 												<span>Feugiat a, tellus. Phasellus viverra nulla ut metus varius. Quisque rutrum. Aenean imperdiet... </span>
 											</a>
@@ -218,7 +218,7 @@
 							<!-- theme dropdown -->
 							<div class="btn-group hidden-phone">
 								<a href="javascript:void(0)" class="btn btn-small btn-inverse" id="reset-widget"><i class="icon-refresh"></i></a>
-								<a href="javascript:void(0)" class="btn btn-small btn-inverse dropdown-toggle" data-toggle="dropdown">Themes <span class="caret"></span></a>
+								<a href="javascript:void(0)" class="btn btn-small btn-inverse dropdown-toggle" data-toggle="dropdown">Setingan <span class="caret"></span></a>
 								<ul id="theme-links-js" class="dropdown-menu toolbar pull-right">
 									<li>
 										<a href="javascript:void(0)" data-rel="purple"><i class="icon-sign-blank purple-icon"></i>Royal Purple</a>
@@ -234,6 +234,9 @@
 									</li>
 									<li>
 										<a href="javascript:void(0)" data-rel="default"><i class="icon-sign-blank grey-icon"></i>Default</a>
+									</li>
+                                    <li>
+										<a href="javascript:void(0);" class="logout-js" data-rel="login.html">Logout</a>
 									</li>
 								</ul>
 							</div>
@@ -267,12 +270,11 @@
 					<!-- aside item: Mini profile -->
 					<div class="my-profile">
 						<a href="javascript:void(0)" class="my-profile-pic">
-							<img src="img/avatar/avatar_0.jpg" alt="" />
+							<img src="img/avatar/avatar_1.jpg" alt="" />
 						</a>
-						<span class="first-child">Welcome <strong>Dr. Who!</strong></span>
+						<span class="first-child">Selamat Datang <strong>Dr. Who!</strong></span>
 						<span><a href="javascript:void(0);">Edit Profile </a></span>
 					</div>
-					<div class="divider"></div>
 					<!-- end aside item: Mini profile -->
 
 					<!-- aside item: Menu -->
@@ -281,151 +283,45 @@
 						<ul class="menu" id="accordion-menu-js">
 							<li class="current">
 								<a href="javascript:void(0)"><i class="icon-off"></i>Dashboard <span class="badge">2</span></a>
-								<ul>
-									<li>
-										<a href="index.html" class="expanded">Dashboard</a>
-									</li>
-									<li>
-										<a href="javascript:void(0);" class="logout-js" data-rel="login.html">Logout</a>
-									</li>
-								</ul>
 							</li>
 							<li class="">
-								<a href="inbox.html"><i class="icon-envelope"></i>Inbox</a>
+								<a href="inbox.html"><i class="icon-envelope"></i>Daftar Penyakit</a>
 							</li>
 							<li class="">
-								<a href="javascript:void(0)"><i class="icon-check"></i>Forms<span class="badge">3</span></a>
-								<ul>
-									<li>
-										<a href="forms.html">Form Elements</a>
-									</li>
-									<li>
-										<a href="validation.html">Validation</a>
-									</li>
-									<li>
-										<a href="wizard.html">Wizards</a>
-									</li>
-								</ul>
+								<a href="javascript:void(0)"><i class="icon-user"></i>Daftar Obat</a>
 							</li>
 							<li class="">
-								<a href="javascript:void(0)"><i class="icon-user"></i>Interface<span class="badge">3</span></a>
-								<ul>
-									<li>
-										<a href="interface.html">Interface Elements</a>
-									</li>
-									<li>
-										<a href="buttons.html">Buttons &amp; Icons</a>
-									</li>
-									<li>
-										<a href="tables.html">Tables</a>
-									</li>
-								</ul>
+								<a href="javascript:void(0)"><i class="icon-signal"></i>Daftar Diagnostik</a>
 							</li>
 							<li class="">
-								<a href="javascript:void(0)"><i class="icon-signal"></i>Charts &amp; Graphs<span class="badge">2</span></a>
-								<ul>
-									<li>
-										<a href="basic_charts.html">Basic Charts</a>
-									</li>
-									<li>
-										<a href="adv_charts.html">Advanced Charts</a>
-									</li>
-								</ul>
-							</li>
-							<li class="">
-								<a href="widgets.html"><i class="icon-refresh"></i>Smart Widgets</a>
-							</li>
-							<li class="">
-								<a href="javascript:void(0)"><i class="icon-plus"></i>Bonus<span class="badge">3</span></a>
-								<ul>
-									<li>
-										<a href="invoice.html">Invoice</a>
-									</li>
-									<li>
-										<a href="typography.html">Typography</a>
-									</li>
-									<li>
-										<a href="chat.html">Chat</a>
-									</li>
-								</ul>
+								<a href="widgets.html"><i class="icon-refresh"></i>Daftar Perubahan</a>
 							</li>
 						</ul>
 
 					</div>
-					<div class="divider"></div>
 					<!-- end aside item: Menu -->
 
-					<!-- aside item: Inbox -->
-					<!-- inbox message 1-->
-					<div class="mini-inbox">
-						<div class="alert inbox">
-							<button type="button" class="close" data-dismiss="alert">
-								×
-							</button>
-
-							<a href="javascript:void(0)">
-								<img src="img/email-important.png" width="22" height="18" alt="important mail" />
-								From:David S...
-							</a>
-							Dear Dr. Who, Congratulations! You work has been uploade...
-						</div>
-						<!-- inbox message 2-->
-						<div class="alert inbox">
-							<button type="button" class="close" data-dismiss="alert">
-								×
-							</button>
-							<a href="javascript:void(0)">
-								<img src="img/email-unread.png" width="22" height="18" alt="important mail" />
-								Re:Last Year...
-							</a>
-							Hey Vicky, find attached! Thx :-)
-						</div>
-						<!-- inbox message 3-->
-						<div class="alert inbox last-child">
-							<button type="button" class="close" data-dismiss="alert">
-								×
-							</button>
-							<a href="javascript:void(0)">
-								<img src="img/email-unread.png" width="22" height="18" alt="important mail" />
-								Company Party
-							</a>
-							Hi, You have been cordially invited to join new year...
-						</div>
-
-					</div>
 					<div class="divider"></div>
 					<!-- end aside item: Inbox -->
 
 					<!-- aside item: Tiny Stats -->
 					<div class="number-stats">
 				    	<ul>
-				        	<li>4579<span>visitors</span></li>
-				            <li>571<span>orders</span></li>
-				            <li>879<span>reviews</span></li>
+				        	<li>500<span>Penyakit</span></li>
+				            <li>1001<span>Obat</span></li>
+				            <li>879<span>Diagnosa</span></li>
 				        </ul>
 				    </div>
 				    <div class="divider"></div>
 					<!-- end aside item: Tiny Stats -->
 
-					<!-- aside buttons -->
-					<div class="aside-buttons">
-		                <a href="javascript:void(0)" title="" class="btn btn-primary">Create an Invoice</a>
-		            </div>
-		            <div class="divider"></div>
-		            <!-- end aside buttons -->
 				</aside>
 				<!-- aside end -->
 
 				<!-- main content -->
-				<div id="page-content">
+				<div id="page-content" style="margin-right: 20px;">
 					<!-- page header -->
 					<h1 id="page-header">Dashboard</h1>
-
-					<div class="alert adjusted alert-info">
-						<button class="close" data-dismiss="alert">×</button>
-						<i class="cus-exclamation"></i>
-						<strong>Welcome to {Jarvis}Admin</strong> Please don't forget to check out all the pages and the features.
-					</div>
 
 					<div class="fluid-container">
 
@@ -436,20 +332,7 @@
 									<label>+548 </label>
 									<a href="javascript:void(0)" title="">
 										<img src="img/start-icons/add-user.png" alt="" />
-										<span>Add New User</span>
-									</a>
-								</li>
-								<li>
-									<label>246 </label>
-									<a href="javascript:void(0)" title="">
-										<img src="img/start-icons/orders.png" alt="" />
-										<span>View Orders</span>
-									</a>
-								</li>
-								<li>
-									<a href="javascript:void(0)" title="">
-										<img src="img/start-icons/mass.png" alt="" />
-										<span>Broadcast</span>
+										<span>Tambah User</span>
 									</a>
 								</li>
 								<li>
@@ -463,13 +346,13 @@
 									<label>657</label>
 									<a href="javascript:void(0)" title="">
 										<img src="img/start-icons/pending-message.png" alt="" />
-										<span>Comments</span>
+										<span>Komentar</span>
 									</a>
 								</li>
 								<li>
 									<a href="javascript:void(0)" title="">
 										<img src="img/start-icons/upgrade.png" alt="" />
-										<span>Service Upgrade</span>
+										<span>Update Aplikasi</span>
 									</a>
 								</li>
 							</ul>
@@ -480,20 +363,477 @@
 						<!-- widget grid -->
 						<section id="widget-grid" class="">
 
-							<!-- row-fluid -->
-							<div class="row-fluid">
+                            <div class="row-fluid">
 								<article class="span12">
 									<!-- new widget -->
 									<div class="jarviswidget" id="widget-id-0">
 									    <header>
-									        <h2>Chart</h2>
+									        <h2>Diagnostik Penyakit</h2>
 									    </header>
+									    <!-- wrap div -->
 									    <div>
 
 									        <div class="jarviswidget-editbox">
 									            <div>
 									                <label>Title:</label>
 									                <input type="text" />
+									            </div>
+									            <div>
+									                <label>Styles:</label>
+									                <span data-widget-setstyle="purple" class="purple-btn"></span>
+									                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
+									                <span data-widget-setstyle="green" class="green-btn"></span>
+									                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
+									                <span data-widget-setstyle="orange" class="orange-btn"></span>
+									                <span data-widget-setstyle="pink" class="pink-btn"></span>
+									                <span data-widget-setstyle="red" class="red-btn"></span>
+									                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
+									                <span data-widget-setstyle="black" class="black-btn"></span>
+									            </div>
+									        </div>
+
+									        <div class="inner-spacer">
+									        <!-- content goes here -->
+												<table class="table table-striped table-bordered responsive" id="dtable">
+													<thead>
+														<tr>
+															<th>Nama Penyakit</th>
+															<th>Penyebab</th>
+															<th>Gejala</th>
+															<th>Diagnostik</th>
+															<th>Obat</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="odd gradeX">
+															<td>Trident</td>
+															<td>Internet
+																 Explorer 4.0</td>
+															<td>Win 95+</td>
+															<td class="center"> 4</td>
+															<td class="center">X</td>
+														</tr>
+														<tr class="even gradeC">
+															<td>Trident</td>
+															<td>Internet
+																 Explorer 5.0</td>
+															<td>Win 95+</td>
+															<td class="center">5</td>
+															<td class="center">C</td>
+														</tr>
+														<tr class="odd gradeA">
+															<td>Trident</td>
+															<td>Internet
+																 Explorer 5.5</td>
+															<td>Win 95+</td>
+															<td class="center">5.5</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="even gradeA">
+															<td>Trident</td>
+															<td>Internet
+																 Explorer 6</td>
+															<td>Win 98+</td>
+															<td class="center">6</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="odd gradeA">
+															<td>Trident</td>
+															<td>Internet Explorer 7</td>
+															<td>Win XP SP2+</td>
+															<td class="center">7</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="even gradeA">
+															<td>Trident</td>
+															<td>AOL browser (AOL desktop)</td>
+															<td>Win XP</td>
+															<td class="center">6</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Firefox 1.0</td>
+															<td>Win 98+ / OSX.2+</td>
+															<td class="center">1.7</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Firefox 1.5</td>
+															<td>Win 98+ / OSX.2+</td>
+															<td class="center">1.8</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Firefox 2.0</td>
+															<td>Win 98+ / OSX.2+</td>
+															<td class="center">1.8</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Firefox 3.0</td>
+															<td>Win 2k+ / OSX.3+</td>
+															<td class="center">1.9</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Camino 1.0</td>
+															<td>OSX.2+</td>
+															<td class="center">1.8</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Camino 1.5</td>
+															<td>OSX.3+</td>
+															<td class="center">1.8</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Netscape 7.2</td>
+															<td>Win 95+ / Mac OS 8.6-9.2</td>
+															<td class="center">1.7</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Netscape Browser 8</td>
+															<td>Win 98SE+</td>
+															<td class="center">1.7</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Netscape Navigator 9</td>
+															<td>Win 98+ / OSX.2+</td>
+															<td class="center">1.8</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Mozilla 1.0</td>
+															<td>Win 95+ / OSX.1+</td>
+															<td class="center">1</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Mozilla 1.1</td>
+															<td>Win 95+ / OSX.1+</td>
+															<td class="center">1.1</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Mozilla 1.2</td>
+															<td>Win 95+ / OSX.1+</td>
+															<td class="center">1.2</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Mozilla 1.3</td>
+															<td>Win 95+ / OSX.1+</td>
+															<td class="center">1.3</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Mozilla 1.4</td>
+															<td>Win 95+ / OSX.1+</td>
+															<td class="center">1.4</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Mozilla 1.5</td>
+															<td>Win 95+ / OSX.1+</td>
+															<td class="center">1.5</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Mozilla 1.6</td>
+															<td>Win 95+ / OSX.1+</td>
+															<td class="center">1.6</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Mozilla 1.7</td>
+															<td>Win 98+ / OSX.1+</td>
+															<td class="center">1.7</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Mozilla 1.8</td>
+															<td>Win 98+ / OSX.1+</td>
+															<td class="center">1.8</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Seamonkey 1.1</td>
+															<td>Win 98+ / OSX.2+</td>
+															<td class="center">1.8</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Gecko</td>
+															<td>Epiphany 2.20</td>
+															<td>Gnome</td>
+															<td class="center">1.8</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Webkit</td>
+															<td>Safari 1.2</td>
+															<td>OSX.3</td>
+															<td class="center">125.5</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Webkit</td>
+															<td>Safari 1.3</td>
+															<td>OSX.3</td>
+															<td class="center">312.8</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Webkit</td>
+															<td>Safari 2.0</td>
+															<td>OSX.4+</td>
+															<td class="center">419.3</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Webkit</td>
+															<td>Safari 3.0</td>
+															<td>OSX.4+</td>
+															<td class="center">522.1</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Webkit</td>
+															<td>OmniWeb 5.5</td>
+															<td>OSX.4+</td>
+															<td class="center">420</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Webkit</td>
+															<td>iPod Touch / iPhone</td>
+															<td>iPod</td>
+															<td class="center">420.1</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Webkit</td>
+															<td>S60</td>
+															<td>S60</td>
+															<td class="center">413</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Presto</td>
+															<td>Opera 7.0</td>
+															<td>Win 95+ / OSX.1+</td>
+															<td class="center">-</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Presto</td>
+															<td>Opera 7.5</td>
+															<td>Win 95+ / OSX.2+</td>
+															<td class="center">-</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Presto</td>
+															<td>Opera 8.0</td>
+															<td>Win 95+ / OSX.2+</td>
+															<td class="center">-</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Presto</td>
+															<td>Opera 8.5</td>
+															<td>Win 95+ / OSX.2+</td>
+															<td class="center">-</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Presto</td>
+															<td>Opera 9.0</td>
+															<td>Win 95+ / OSX.3+</td>
+															<td class="center">-</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Presto</td>
+															<td>Opera 9.2</td>
+															<td>Win 88+ / OSX.3+</td>
+															<td class="center">-</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Presto</td>
+															<td>Opera 9.5</td>
+															<td>Win 88+ / OSX.3+</td>
+															<td class="center">-</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Presto</td>
+															<td>Opera for Wii</td>
+															<td>Wii</td>
+															<td class="center">-</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Presto</td>
+															<td>Nokia N800</td>
+															<td>N800</td>
+															<td class="center">-</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Presto</td>
+															<td>Nintendo DS browser</td>
+															<td>Nintendo DS</td>
+															<td class="center">8.5</td>
+															<td class="center">C/A<sup>1</sup></td>
+														</tr>
+														<tr class="gradeC">
+															<td>KHTML</td>
+															<td>Konqureror 3.1</td>
+															<td>KDE 3.1</td>
+															<td class="center">3.1</td>
+															<td class="center">C</td>
+														</tr>
+														<tr class="gradeA">
+															<td>KHTML</td>
+															<td>Konqureror 3.3</td>
+															<td>KDE 3.3</td>
+															<td class="center">3.3</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeA">
+															<td>KHTML</td>
+															<td>Konqureror 3.5</td>
+															<td>KDE 3.5</td>
+															<td class="center">3.5</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeX">
+															<td>Tasman</td>
+															<td>Internet Explorer 4.5</td>
+															<td>Mac OS 8-9</td>
+															<td class="center">-</td>
+															<td class="center">X</td>
+														</tr>
+														<tr class="gradeC">
+															<td>Tasman</td>
+															<td>Internet Explorer 5.1</td>
+															<td>Mac OS 7.6-9</td>
+															<td class="center">1</td>
+															<td class="center">C</td>
+														</tr>
+														<tr class="gradeC">
+															<td>Tasman</td>
+															<td>Internet Explorer 5.2</td>
+															<td>Mac OS 8-X</td>
+															<td class="center">1</td>
+															<td class="center">C</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Misc</td>
+															<td>NetFront 3.1</td>
+															<td>Embedded devices</td>
+															<td class="center">-</td>
+															<td class="center">C</td>
+														</tr>
+														<tr class="gradeA">
+															<td>Misc</td>
+															<td>NetFront 3.4</td>
+															<td>Embedded devices</td>
+															<td class="center">-</td>
+															<td class="center">A</td>
+														</tr>
+														<tr class="gradeX">
+															<td>Misc</td>
+															<td>Dillo 0.8</td>
+															<td>Embedded devices</td>
+															<td class="center">-</td>
+															<td class="center">X</td>
+														</tr>
+														<tr class="gradeX">
+															<td>Misc</td>
+															<td>Links</td>
+															<td>Text only</td>
+															<td class="center">-</td>
+															<td class="center">X</td>
+														</tr>
+														<tr class="gradeX">
+															<td>Misc</td>
+															<td>Lynx</td>
+															<td>Text only</td>
+															<td class="center">-</td>
+															<td class="center">X</td>
+														</tr>
+														<tr class="gradeC">
+															<td>Misc</td>
+															<td>IE Mobile</td>
+															<td>Windows Mobile 6</td>
+															<td class="center">-</td>
+															<td class="center">C</td>
+														</tr>
+														<tr class="gradeC">
+															<td>Misc</td>
+															<td>PSP browser</td>
+															<td>PSP</td>
+															<td class="center">-</td>
+															<td class="center">C</td>
+														</tr>
+														<tr class="gradeU">
+															<td>Other browsers</td>
+															<td>All others</td>
+															<td>-</td>
+															<td class="center">-</td>
+															<td class="center">U</td>
+														</tr>
+													</tbody>
+												</table>
+
+										    </div>
+										    <!-- end content-->
+									    </div>
+									    <!-- end wrap div -->
+									</div>
+									<!-- end widget -->
+								</article>
+							</div>
+
+							<!-- row-fluid -->
+							<div class="row-fluid">
+								<article class="span12">
+									<!-- new widget -->
+									<div class="jarviswidget" id="widget-id-0">
+									    <header>
+									        <h2>Pelaporan penyakit</h2>
+									    </header>
+									    <div>
+
+									        <div class="jarviswidget-editbox">
+									            <div>
+									                <label>Title:</label>
+                                                    <input type="text" value="Pelaporan Penyakit"/>
 									            </div>
 									            <div>
 									                <label>Styles:</label>
@@ -540,7 +880,7 @@
 									<!-- new widget -->
 									<div class="jarviswidget" id="widget-id-1">
 									    <header>
-									        <h2>Calendar</h2>
+									        <h2>Kalender Kegiatan</h2>
 									    </header>
 
 									    <!-- widget div-->
@@ -614,7 +954,7 @@
 									<!-- new widget -->
 									<div class="jarviswidget" id="widget-id-2">
 									    <header>
-									        <h2>Chat Interface</h2>
+									        <h2>Dialog Sejawab</h2>
 									    </header>
 
 									    <!-- widget div-->
@@ -792,172 +1132,6 @@
 
 							<!-- end row-fluid -->
 
-							<!-- row-fluid -->
-
-							<div class="row-fluid">
-								<article class="span12">
-									<!-- new widget -->
-									<div class="jarviswidget" id="widget-id-3">
-									    <header>
-									        <h2>Campaign Monitor</h2>
-									    </header>
-
-									    <!-- widget div-->
-									    <div>
-									    	<!-- widget edit box -->
-									        <div class="jarviswidget-editbox">
-									            <div>
-									                <label>Title:</label>
-									                <input type="text" />
-									            </div>
-									            <div>
-									                <label>Styles:</label>
-									                <span data-widget-setstyle="purple" class="purple-btn"></span>
-									                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
-									                <span data-widget-setstyle="green" class="green-btn"></span>
-									                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
-									                <span data-widget-setstyle="orange" class="orange-btn"></span>
-									                <span data-widget-setstyle="pink" class="pink-btn"></span>
-									                <span data-widget-setstyle="red" class="red-btn"></span>
-									                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
-									                <span data-widget-setstyle="black" class="black-btn"></span>
-									            </div>
-									        </div>
-									        <!-- end widget edit box -->
-
-									        <div class="inner-spacer">
-									        <!-- content -->
-												<div class="widget alert alert-success adjusted">
-													<button class="btn btn-mini pull-right btn-success">New Campaign</button>
-													<i class="cus-accept"></i>
-													<strong>Congratulations!</strong> Your last campaign was a success. Your goal was reached on <strong>28-12-12 @ 4:23 AM</strong>. Would you like to set up a new campaign?
-												</div>
-												<!-- sales chart -->
-								        		<div id="saleschart" class="chart"></div>
-
-											<!-- end content -->
-									        </div>
-
-									    </div>
-									    <!-- end widget div -->
-									</div>
-									<!-- end widget -->
-								</article>
-							</div>
-
-							<!-- end row-fluid -->
-
-							<!-- row-fluid -->
-
-							<div class="row-fluid">
-
-								<article class="span6">
-									<!-- new widget -->
-									<div class="jarviswidget" id="widget-id-4">
-									    <header>
-									        <h2>Bootstrap WYSIHTML5 Editor</h2>
-									    </header>
-									    <div>
-
-									        <div class="jarviswidget-editbox">
-									            <div>
-									                <label>Title:</label>
-									                <input type="text" />
-									            </div>
-									            <div>
-									                <label>Styles:</label>
-									                <span data-widget-setstyle="purple" class="purple-btn"></span>
-									                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
-									                <span data-widget-setstyle="green" class="green-btn"></span>
-									                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
-									                <span data-widget-setstyle="orange" class="orange-btn"></span>
-									                <span data-widget-setstyle="pink" class="pink-btn"></span>
-									                <span data-widget-setstyle="red" class="red-btn"></span>
-									                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
-									                <span data-widget-setstyle="black" class="black-btn"></span>
-									            </div>
-									        </div>
-
-									        <div class="inner-spacer wysihtml5-widget">
-									        <!-- content -->
-												<textarea id="wysihtml5" placeholder="Enter text ..." style="width: 100%; height: 200px;"></textarea>
-
-											    <div class="pull-right post-msg">
-											    	<a href="javascript:void(0)" class="btn medium" id="save-notes-btn-js">Save to notes</a>
-											    	<a href="javascript:void(0)" class="btn medium btn-primary" id="post-btn-js">Post Message</a>
-											    </div>
-											<!-- end content -->
-									        </div>
-									        <!-- end inner spacer -->
-									    </div>
-									</div>
-									<!-- end widget -->
-								</article>
-
-								<article class="span6">
-
-									<!-- new widget -->
-									<div class="jarviswidget" id="widget-id-5">
-									    <header>
-									        <h2>Tasks in progress</h2>
-									    </header>
-									    <div>
-
-									        <div class="jarviswidget-editbox">
-									            <div>
-									                <label>Title:</label>
-									                <input type="text" />
-									            </div>
-									            <div>
-									                <label>Styles:</label>
-									                <span data-widget-setstyle="purple" class="purple-btn"></span>
-									                <span data-widget-setstyle="navyblue" class="navyblue-btn"></span>
-									                <span data-widget-setstyle="green" class="green-btn"></span>
-									                <span data-widget-setstyle="yellow" class="yellow-btn"></span>
-									                <span data-widget-setstyle="orange" class="orange-btn"></span>
-									                <span data-widget-setstyle="pink" class="pink-btn"></span>
-									                <span data-widget-setstyle="red" class="red-btn"></span>
-									                <span data-widget-setstyle="darkgrey" class="darkgrey-btn"></span>
-									                <span data-widget-setstyle="black" class="black-btn"></span>
-									            </div>
-									        </div>
-
-									        <div class="inner-spacer">
-									        <!-- content goes here -->
-												<div class="progress-stats">
-			                                        <div class="widget-content-padding">
-			                                            <strong>Hot Fixes</strong><strong class="pull-right">51%</strong>
-			                                            <div class="progress progress-danger value"><div class="bar" data-percentage="30" data-amount-part="784" data-amount-total="1544">784 / 1544</div></div>
-
-			                                            <div class="semi-block">
-			                                                <strong>Urgent Tasks</strong><strong class="pull-right">87%</strong>
-			                                                <div class="progress progress-info value"><div class="bar" data-percentage="40" data-amount-part="456" data-amount-total="631">456 / 631</div></div>
-			                                            </div>
-
-			                                            <div class="semi-block">
-			                                                <strong>Other tasks</strong><strong class="pull-right">41%</strong>
-			                                                <div class="progress progress-success value"><div class="bar" data-percentage="79" data-amount-part="51" data-amount-total="141">51 / 141</div></div>
-			                                            </div>
-
-			                                            <div class="semi-block">
-			                                                <strong>Pending tasks</strong><strong class="pull-right">33%</strong>
-			                                                <div class="progress progress-warning value"><div class="bar" data-percentage="33" data-amount-part="33" data-amount-total="100">33 / 100</div></div>
-			                                            </div>
-			                                        </div>
-			                                    </div>
-									        <!-- end content -->
-									        </div>
-
-
-									    </div>
-									</div>
-									<!-- end widget -->
-								</article>
-
-							</div>
-
-							<!-- end row-fluid -->
-
 						</section>
 						<!-- end widget grid -->
 					</div>
@@ -965,78 +1139,6 @@
 				<!-- end main content -->
 
 				<!-- aside right on high res -->
-				<aside class="right">
-
-					<!-- sparkline stats -->
-					<ul class="mystats indented">
-		                <li class="first">
-		                    <h1><span>My Balance:</span>$17,349</h1>
-		                    <div class="mychart" id="balance" style="width:35px"></div>
-		                </li>
-		                <li>
-		                    <h1><span>Impressions:</span>145k+</h1>
-		                    <div class="mychart" id="clicks" style="width:35px"></div>
-		                </li>
-		                <li>
-		                    <h1><span>Subscribers:</span>1,120</h1>
-		                    <div class="mychart" id="subscribe" style="width:35px"></div>
-		                </li>
-		                <li class="last">
-		                    <h1><span>Support Ticket:</span>945+</h1>
-		                    <div class="mychart" id="support" style="width:35px"></div>
-		                </li>
-		            </ul>
-		            <div class="divider"></div>
-		            <!-- end sparkline stats -->
-
-					<!-- aside progress bars -->
-					<ul class="indented aside-progress-stats">
-						<li>
-							<!-- easy pie chart -->
-							<div class="easypie">
-								<div class="percentage" data-percent="68">
-									<span>68</span>%
-								</div>
-								<div class="easypie-text">
-									Server load
-								</div>
-							</div>
-							<!-- end easy pie chart -->
-						</li>
-		                <li>
-		                    <strong>Data Restored</strong><strong class="pull-right">90%</strong>
-		                    <div class="progress progress-danger slim"><div class="bar" data-percentage="90"></div></div>
-		                </li>
-		                <li>
-		                    <strong>Recovering IDE</strong><strong class="pull-right">66%</strong>
-		                    <div class="progress progress-info slim"><div class="bar" data-percentage="66"></div></div>
-		                </li>
-		                <li>
-		                    <strong>DLL Construction</strong><strong class="pull-right">48%</strong>
-		                    <div class="progress progress-info slim"><div class="bar" data-percentage="48"></div></div>
-		                </li>
-		                <li>
-		                    <strong>Machine Req</strong><strong class="pull-right">33%</strong>
-		                    <div class="progress progress-info slim"><div class="bar" data-percentage="33"></div></div>
-		                </li>
-		            </ul>
-		            <div class="divider"></div>
-		            <!-- end aside progress bars -->
-
-					<!-- date picker -->
-					<div id="datepicker"></div>
-					<div class="divider"></div>
-					<!-- end date picker -->
-
-					<!-- aside buttons -->
-					<div class="aside-buttons">
-		                <a href="javascript:void(0);" title="" class="btn btn-info">Create an Invoice</a>
-		                <a href="javascript:void(0);" title="" class="btn btn-success">New Campaign</a>
-		                <a href="javascript:void(0);" title="" class="btn btn-danger">Delete Progress</a>
-		            </div>
-		            <div class="divider"></div>
-		            <!-- end aside buttons -->
-				</aside>
 
 				<!-- end aside right -->
 			</div>
@@ -1065,7 +1167,8 @@
     <script src="js/include/jquery.ui.touch-punch.min.js"></script>
 
 	<!-- REQUIRED: Datatable components -->
-    <script src="js/include/jquery.accordion.min.js"></script>
+	<script src="js/include/jquery.dataTables.min.js"></script>
+	<script src="js/include/DT_bootstrap.min.js"></script>
 
 	<!-- REQUIRED: Toastr & Jgrowl notifications  -->
     <script src="js/include/toastr.min.js"></script>
@@ -1086,10 +1189,10 @@
 
 	    	/* REQUIRED: Datatable PDF/Excel output componant */
 
-	    	/*-- document.write('<script src="js/include/ZeroClipboard.min.js"><\/script>'); --*/
-	    	/*-- document.write('<script src="js/include/TableTools.min.js"><\/script>'); --*/
-	    	/*-- document.write('<script src="js/include/jquery.uniform.min.js"><\/script>'); --*/
-	    	/*-- document.write('<script src="js/include/select2.min.js"><\/script>'); --*/
+	    	document.write('<script src="js/include/ZeroClipboard.min.js"><\/script>');
+	    	document.write('<script src="js/include/TableTools.min.js"><\/script>');
+	    	document.write('<script src="js/include/jquery.uniform.min.js"><\/script>');
+	    	document.write('<script src="js/include/select2.min.js"><\/script>');
 	    	document.write('<script src="js/include/jquery.excanvas.min.js"><\/script>');
 	    	document.write('<script src="js/include/jquery.placeholder.min.js"><\/script>');
 
