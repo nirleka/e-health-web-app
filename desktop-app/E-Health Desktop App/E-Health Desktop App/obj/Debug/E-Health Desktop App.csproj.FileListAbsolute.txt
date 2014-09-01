@@ -19,5 +19,5 @@ F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\
 F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Debug\E-Health Desktop App.g.resources
 F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Debug\E-Health Desktop App.exe
 F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Debug\E-Health Desktop App.pdb
-F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Debug\Pages\Test.baml
-F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Debug\Pages\Test.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Debug\Pages\Login.baml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Debug\Pages\Login.g.cs

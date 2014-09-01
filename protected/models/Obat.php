@@ -30,8 +30,7 @@ class Obat extends EhealthActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, nama, keterangan, dosis', 'required'),
-			array('id', 'length', 'max'=>20),
+			array('nama, keterangan, dosis', 'required'),
 			array('nama', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

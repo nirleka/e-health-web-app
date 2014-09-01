@@ -9,12 +9,15 @@
  * @property string $penyebab
  * @property string $gejala
  * @property string $diagnosis
+ * @property string $knowledge
  *
  * The followings are the available model relations:
  * @property Obat[] $obats
  */
 class Penyakit extends EhealthActiveRecord
 {
+	public $obatsIDs = array();
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -33,9 +36,16 @@ class Penyakit extends EhealthActiveRecord
 		return array(
 			array('nama, penyebab, gejala, diagnosis', 'required'),
 			array('nama', 'length', 'max'=>50),
+			array('obatsIDs, nama, gejala, diagnosis, knowledge, penyebab', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, nama, penyebab, gejala, diagnosis', 'safe', 'on'=>'search'),
+		);
+	}
+
+	public function behaviors(){
+		return array( 'CAdvancedArBehavior' => array(
+			'class' => 'application.extensions.CAdvancedArBehavior')
 		);
 	}
 
@@ -51,6 +61,27 @@ class Penyakit extends EhealthActiveRecord
 		);
 	}
 
+	public function afterFind()
+	{
+		$listObat = Yii::app()->db->createCommand()->select('id_obat')
+												   ->from('penyakit_has_obat')
+												   ->where('id_penyakit = :id', array(':id' => $this->id))
+												   ->queryAll();
+
+		foreach ($listObat as $value) {
+			$this->obatsIDs[] = $value['id_obat'];
+		}
+	}
+
+	public function getObatName()
+    {
+        $names = array();
+        foreach($this->obats as $obat) {
+            $names[] = $obat->nama."<br>";
+        }
+        return implode("\n", $names);
+    }
+
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */
@@ -62,6 +93,8 @@ class Penyakit extends EhealthActiveRecord
 			'penyebab' => 'Penyebab',
 			'gejala' => 'Gejala',
 			'diagnosis' => 'Diagnosis',
+			'knowledge' => 'Knowledge',
+			'obatsIDs' => 'Daftar Obat',
 		);
 	}
 
@@ -83,11 +116,11 @@ class Penyakit extends EhealthActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id,true);
 		$criteria->compare('nama',$this->nama,true);
 		$criteria->compare('penyebab',$this->penyebab,true);
 		$criteria->compare('gejala',$this->gejala,true);
 		$criteria->compare('diagnosis',$this->diagnosis,true);
+		$criteria->compare('knowledge',$this->diagnosis,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

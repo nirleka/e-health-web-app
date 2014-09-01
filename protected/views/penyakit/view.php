@@ -26,5 +26,11 @@ $this->menu=array(
 		'penyebab',
 		'gejala',
 		'diagnosis',
+		'knowledge',
+		array(
+            'label'=>'Daftar Obat',
+            'type'=>'raw',
+            'value'=>$model->obatName,
+        ),
 	),
 )); ?>

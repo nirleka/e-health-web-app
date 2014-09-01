@@ -65,17 +65,23 @@ class PenyakitController extends Controller
 		$model=new Penyakit;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Penyakit']))
 		{
 			$model->attributes=$_POST['Penyakit'];
+			$model->obats = $_POST['Penyakit']['obatsIDs'];
+
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
-		$this->render('create',array(
+		$listObat = CHtml::listData(Obat::model()->findAll(), 'id', 'nama');
+		if (empty($listObat)) $listObat = array();
+
+		$this->render('create', array(
 			'model'=>$model,
+			'listObat' => $listObat
 		));
 	}
 
@@ -89,17 +95,22 @@ class PenyakitController extends Controller
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Penyakit']))
 		{
 			$model->attributes=$_POST['Penyakit'];
+			$model->obats = $_POST['Penyakit']['obatsIDs'];
+
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
+		$listObat = CHtml::listData(Obat::model()->findAll(), 'id', 'nama');
+
 		$this->render('update',array(
 			'model'=>$model,
+			'listObat' => empty($listObat) ? array() : $listObat
 		));
 	}
 

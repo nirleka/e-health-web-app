@@ -65,13 +65,12 @@ class ObatController extends Controller
 		$model=new Obat;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Obat']))
 		{
 			$model->attributes=$_POST['Obat'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			if($model->save()) $this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('create',array(
@@ -89,7 +88,7 @@ class ObatController extends Controller
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Obat']))
 		{
