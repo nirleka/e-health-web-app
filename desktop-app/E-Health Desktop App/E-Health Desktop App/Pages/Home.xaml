@@ -3,13 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d">
+    
     <Grid Style="{StaticResource ContentRoot}">
-        <ScrollViewer>
-            <StackPanel MinWidth="200">
-                <TextBlock Text="TODO: add content" />
-            </StackPanel>
-        </ScrollViewer>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="6"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <ScrollViewer Margin="0,0,0,0" HorizontalContentAlignment="Stretch">
+                <StackPanel>
+                    <TextBlock Text="Cari Penyakit" Style="{StaticResource Heading1}" Margin="0,0,30,0" HorizontalAlignment="Left"/>
+                    <TextBox x:Name="Query" Height="23" TextWrapping="Wrap" Text="" Margin="0,0,20,0" KeyDown="enter_KeyDown"/>
+                    <Button Content="Cari" Width="75" HorizontalAlignment="Right" x:Name="CariBTN" Margin="20" Click="CariBTN_Click"/>
+
+                    <DataGrid Name="GridPenyakit" AutoGenerateColumns="True"/>
+                </StackPanel>
+                
+            </ScrollViewer>
+        </Grid>
+        
+        <GridSplitter Grid.Column="1" />
+
+        <Grid Grid.Column="2" Margin="{StaticResource SplitRight}">
+        </Grid>
     </Grid>
 </UserControl>

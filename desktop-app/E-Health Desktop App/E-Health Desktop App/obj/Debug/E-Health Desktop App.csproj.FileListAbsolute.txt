@@ -21,3 +21,16 @@ F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\
 F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Debug\E-Health Desktop App.pdb
 F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Debug\Pages\Login.baml
 F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Debug\Pages\Login.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Debug\E-Health Desktop App.exe.config
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Debug\databases\e-health.sqlite
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Debug\EntityFramework.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Debug\EntityFramework.xml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Debug\E-Health Desktop App_Content.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Debug\EntityFramework.SqlServer.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Debug\EntityFramework.SqlServer.xml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Debug\x64\SQLite.Interop.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Debug\x86\SQLite.Interop.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Debug\System.Data.SQLite.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Debug\System.Data.SQLite.EF6.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Debug\System.Data.SQLite.Linq.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Debug\System.Data.SQLite.xml

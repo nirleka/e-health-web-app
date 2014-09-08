@@ -21,8 +21,11 @@ namespace E_Health_Desktop_App
     /// </summary>
     public partial class MainWindow : ModernWindow
     {
+        public static ModernFrame frame;
+
         public MainWindow()
         {
+            frame = (ModernFrame)GetTemplateChild("ContentFrame");
             InitializeComponent();
         }
     }

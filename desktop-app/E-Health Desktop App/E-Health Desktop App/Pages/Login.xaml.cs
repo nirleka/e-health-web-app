@@ -19,27 +19,57 @@ namespace E_Health_Desktop_App.Pages
     /// <summary>
     /// Interaction logic for ModernWindow1.xaml
     /// </summary>
-    public partial class ModernWindow1 : ModernWindow
+    public partial class Login : UserControl
     {
-        public ModernWindow1()
+        public Login()
         {
             InitializeComponent();
         }
 
-        private void LoginBTN_Click(object sender, RoutedEventArgs e)
+        private void LoginProcess()
         {
             if (!username.Text.Equals("") && !password.Password.Equals(""))
             {
-                if (username.Text.Equals("admin") && password.Password.Equals("admin") )
+                if (username.Text.Equals("admin") && password.Password.Equals("admin"))
                 {
-                    MessageBox.Show("Login sukses");
-                } else 
+                    //MainWindow main = new MainWindow();
+                    //App.Current.MainWindow = main;
+                    //this.Close();
+                    //main.Show();
+                    BBCodeBlock bs = new BBCodeBlock();
+                    try
+                    {
+                        bs.LinkNavigator.Navigate(new Uri("/Pages/Home.xaml", UriKind.Relative), this);
+                    }
+                    catch (Exception error)
+                    {
+                        ModernDialog.ShowMessage(error.Message, FirstFloor.ModernUI.Resources.NavigationFailed, MessageBoxButton.OK);
+                    }
+                    //string url = "/MainWindow.xaml";
+                    //BBCodeBlock bbBlock = new BBCodeBlock();
+                    //bbBlock.LinkNavigator.Navigate(new Uri(url, UriKind.Relative), null);
+                }
+                else
                 {
                     MessageBox.Show("Username atau Password salah");
                 }
-            } else 
+            }
+            else
             {
                 MessageBox.Show("Username dan Password tidak boleh kosong");
+            }
+        }
+
+        private void LoginBTN_Click(object sender, RoutedEventArgs e)
+        {
+            LoginProcess();
+        }
+
+        private void enter_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                LoginProcess();
             }
         }
     }

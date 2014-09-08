@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="gambar" EntityType="Model.Store.gambar" store:Type="Tables" />
+    <EntitySet Name="jejaring_sosial" EntityType="Model.Store.jejaring_sosial" store:Type="Tables" />
+    <EntitySet Name="langganan_jejaring_sosial" EntityType="Model.Store.langganan_jejaring_sosial" store:Type="Tables" store:Name="langganan_jejaring_sosial">
+      <DefiningQuery>SELECT 
+      [langganan_jejaring_sosial].[id_user_follower] AS [id_user_follower], 
+      [langganan_jejaring_sosial].[id_user_following] AS [id_user_following]
+      FROM [langganan_jejaring_sosial] AS [langganan_jejaring_sosial]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="log_data" EntityType="Model.Store.log_data" store:Type="Tables" />
+    <EntitySet Name="obat" EntityType="Model.Store.obat" store:Type="Tables" />
+    <EntitySet Name="penyakit" EntityType="Model.Store.penyakit" store:Type="Tables" />
+    <EntitySet Name="penyakit_has_obat" EntityType="Model.Store.penyakit_has_obat" store:Type="Tables" store:Name="penyakit_has_obat">
+      <DefiningQuery>SELECT 
+      [penyakit_has_obat].[id_penyakit] AS [id_penyakit], 
+      [penyakit_has_obat].[id_obat] AS [id_obat]
+      FROM [penyakit_has_obat] AS [penyakit_has_obat]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="user" EntityType="Model.Store.user" store:Type="Tables" />
+    <AssociationSet Name="FK_gambar_0_0" Association="Model.Store.FK_gambar_0_0">
+      <End Role="penyakit" EntitySet="penyakit" />
+      <End Role="gambar" EntitySet="gambar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_jejaring_sosial_0_0" Association="Model.Store.FK_jejaring_sosial_0_0">
+      <End Role="user" EntitySet="user" />
+      <End Role="jejaring_sosial" EntitySet="jejaring_sosial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_langganan_jejaring_sosial_0_0" Association="Model.Store.FK_langganan_jejaring_sosial_0_0">
+      <End Role="user" EntitySet="user" />
+      <End Role="langganan_jejaring_sosial" EntitySet="langganan_jejaring_sosial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_langganan_jejaring_sosial_1_0" Association="Model.Store.FK_langganan_jejaring_sosial_1_0">
+      <End Role="user" EntitySet="user" />
+      <End Role="langganan_jejaring_sosial" EntitySet="langganan_jejaring_sosial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_penyakit_has_obat_0_0" Association="Model.Store.FK_penyakit_has_obat_0_0">
+      <End Role="obat" EntitySet="obat" />
+      <End Role="penyakit_has_obat" EntitySet="penyakit_has_obat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_penyakit_has_obat_1_0" Association="Model.Store.FK_penyakit_has_obat_1_0">
+      <End Role="penyakit" EntitySet="penyakit" />
+      <End Role="penyakit_has_obat" EntitySet="penyakit_has_obat" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="gambar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="file" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="deskripsi" Type="nvarchar" />
+    <Property Name="id_penyakit" Type="integer" Nullable="false" />
+  </EntityType>
+  <EntityType Name="jejaring_sosial">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="status" Type="nvarchar" Nullable="false" />
+    <Property Name="stamp" Type="datetime" Nullable="false" />
+    <Property Name="id_user" Type="integer" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'main.langganan_jejaring_sosial' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="langganan_jejaring_sosial">
+    <Key>
+      <PropertyRef Name="id_user_follower" />
+      <PropertyRef Name="id_user_following" />
+    </Key>
+    <Property Name="id_user_follower" Type="integer" Nullable="false" />
+    <Property Name="id_user_following" Type="integer" Nullable="false" />
+  </EntityType>
+  <EntityType Name="log_data">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="stamp" Type="datetime" Nullable="false" />
+    <Property Name="log_act" Type="nvarchar" Nullable="false" />
+    <Property Name="id_user" Type="integer" Nullable="false" />
+  </EntityType>
+  <EntityType Name="obat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nama" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="keterangan" Type="nvarchar" />
+    <Property Name="dosis" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="penyakit">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nama" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="penyebab" Type="nvarchar" Nullable="false" />
+    <Property Name="gejala" Type="nvarchar" Nullable="false" />
+    <Property Name="diagnosis" Type="nvarchar" Nullable="false" />
+    <Property Name="knowledge" Type="nvarchar" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'main.penyakit_has_obat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="penyakit_has_obat">
+    <Key>
+      <PropertyRef Name="id_penyakit" />
+      <PropertyRef Name="id_obat" />
+    </Key>
+    <Property Name="id_penyakit" Type="integer" Nullable="false" />
+    <Property Name="id_obat" Type="integer" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nomor_sip" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="password" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="salt" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="nama" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="lokasi_penugasan" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="no_telp" Type="varchar" Nullable="false" />
+    <Property Name="role" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <Association Name="FK_gambar_0_0">
+    <End Role="penyakit" Type="Model.Store.penyakit" Multiplicity="1" />
+    <End Role="gambar" Type="Model.Store.gambar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="penyakit">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="gambar">
+        <PropertyRef Name="id_penyakit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_jejaring_sosial_0_0">
+    <End Role="user" Type="Model.Store.user" Multiplicity="1" />
+    <End Role="jejaring_sosial" Type="Model.Store.jejaring_sosial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="jejaring_sosial">
+        <PropertyRef Name="id_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_langganan_jejaring_sosial_0_0">
+    <End Role="user" Type="Model.Store.user" Multiplicity="1" />
+    <End Role="langganan_jejaring_sosial" Type="Model.Store.langganan_jejaring_sosial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="langganan_jejaring_sosial">
+        <PropertyRef Name="id_user_following" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_langganan_jejaring_sosial_1_0">
+    <End Role="user" Type="Model.Store.user" Multiplicity="1" />
+    <End Role="langganan_jejaring_sosial" Type="Model.Store.langganan_jejaring_sosial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="langganan_jejaring_sosial">
+        <PropertyRef Name="id_user_follower" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_penyakit_has_obat_0_0">
+    <End Role="obat" Type="Model.Store.obat" Multiplicity="1" />
+    <End Role="penyakit_has_obat" Type="Model.Store.penyakit_has_obat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="obat">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="penyakit_has_obat">
+        <PropertyRef Name="id_obat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_penyakit_has_obat_1_0">
+    <End Role="penyakit" Type="Model.Store.penyakit" Multiplicity="1" />
+    <End Role="penyakit_has_obat" Type="Model.Store.penyakit_has_obat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="penyakit">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="penyakit_has_obat">
+        <PropertyRef Name="id_penyakit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

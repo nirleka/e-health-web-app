@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EHealthContext" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="gambar" EntityType="Model.gambar" />
+    <EntitySet Name="jejaring_sosial" EntityType="Model.jejaring_sosial" />
+    <EntitySet Name="log_data" EntityType="Model.log_data" />
+    <EntitySet Name="obat" EntityType="Model.obat" />
+    <EntitySet Name="penyakit" EntityType="Model.penyakit" />
+    <EntitySet Name="user" EntityType="Model.user" />
+    <AssociationSet Name="FK_gambar_0_0" Association="Model.FK_gambar_0_0">
+      <End Role="penyakit" EntitySet="penyakit" />
+      <End Role="gambar" EntitySet="gambar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_jejaring_sosial_0_0" Association="Model.FK_jejaring_sosial_0_0">
+      <End Role="user" EntitySet="user" />
+      <End Role="jejaring_sosial" EntitySet="jejaring_sosial" />
+    </AssociationSet>
+    <AssociationSet Name="langganan_jejaring_sosial" Association="Model.langganan_jejaring_sosial">
+      <End Role="user" EntitySet="user" />
+      <End Role="user1" EntitySet="user" />
+    </AssociationSet>
+    <AssociationSet Name="penyakit_has_obat" Association="Model.penyakit_has_obat">
+      <End Role="obat" EntitySet="obat" />
+      <End Role="penyakit" EntitySet="penyakit" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="gambar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="file" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="deskripsi" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="id_penyakit" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="penyakit" Relationship="Model.FK_gambar_0_0" FromRole="gambar" ToRole="penyakit" />
+  </EntityType>
+  <EntityType Name="jejaring_sosial">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="status" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="id_user" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="user" Relationship="Model.FK_jejaring_sosial_0_0" FromRole="jejaring_sosial" ToRole="user" />
+  </EntityType>
+  <EntityType Name="log_data">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="stamp" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="log_act" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="id_user" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="obat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="nama" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="keterangan" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="dosis" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="penyakit" Relationship="Model.penyakit_has_obat" FromRole="obat" ToRole="penyakit" />
+  </EntityType>
+  <EntityType Name="penyakit">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="nama" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="penyebab" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="gejala" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="diagnosis" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="knowledge" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="gambar" Relationship="Model.FK_gambar_0_0" FromRole="penyakit" ToRole="gambar" />
+    <NavigationProperty Name="obat" Relationship="Model.penyakit_has_obat" FromRole="penyakit" ToRole="obat" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="nomor_sip" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="salt" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="nama" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lokasi_penugasan" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="no_telp" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="role" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="jejaring_sosial" Relationship="Model.FK_jejaring_sosial_0_0" FromRole="user" ToRole="jejaring_sosial" />
+    <NavigationProperty Name="user1" Relationship="Model.langganan_jejaring_sosial" FromRole="user" ToRole="user1" />
+    <NavigationProperty Name="user2" Relationship="Model.langganan_jejaring_sosial" FromRole="user1" ToRole="user" />
+  </EntityType>
+  <Association Name="FK_gambar_0_0">
+    <End Role="penyakit" Type="Model.penyakit" Multiplicity="1" />
+    <End Role="gambar" Type="Model.gambar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="penyakit">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="gambar">
+        <PropertyRef Name="id_penyakit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_jejaring_sosial_0_0">
+    <End Role="user" Type="Model.user" Multiplicity="1" />
+    <End Role="jejaring_sosial" Type="Model.jejaring_sosial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="jejaring_sosial">
+        <PropertyRef Name="id_user" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="langganan_jejaring_sosial">
+    <End Role="user" Type="Model.user" Multiplicity="*" />
+    <End Role="user1" Type="Model.user" Multiplicity="*" />
+  </Association>
+  <Association Name="penyakit_has_obat">
+    <End Role="obat" Type="Model.obat" Multiplicity="*" />
+    <End Role="penyakit" Type="Model.penyakit" Multiplicity="*" />
+  </Association>
+</Schema>

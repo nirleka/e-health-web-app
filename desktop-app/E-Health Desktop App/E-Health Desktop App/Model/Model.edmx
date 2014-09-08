@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EHealthModel.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="EHealthModelStoreContainer">
+          <EntitySet Name="gambar" EntityType="EHealthModel.Store.gambar" store:Type="Tables" />
+          <EntitySet Name="jejaring_sosial" EntityType="EHealthModel.Store.jejaring_sosial" store:Type="Tables" />
+          <EntitySet Name="langganan_jejaring_sosial" EntityType="EHealthModel.Store.langganan_jejaring_sosial" store:Type="Tables" store:Name="langganan_jejaring_sosial">
+            <DefiningQuery>SELECT 
+      [langganan_jejaring_sosial].[id_user_follower] AS [id_user_follower], 
+      [langganan_jejaring_sosial].[id_user_following] AS [id_user_following]
+      FROM [langganan_jejaring_sosial] AS [langganan_jejaring_sosial]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="log_data" EntityType="EHealthModel.Store.log_data" store:Type="Tables" />
+          <EntitySet Name="obat" EntityType="EHealthModel.Store.obat" store:Type="Tables" />
+          <EntitySet Name="penyakit" EntityType="EHealthModel.Store.penyakit" store:Type="Tables" />
+          <EntitySet Name="penyakit_has_obat" EntityType="EHealthModel.Store.penyakit_has_obat" store:Type="Tables" store:Name="penyakit_has_obat">
+            <DefiningQuery>SELECT 
+      [penyakit_has_obat].[id_penyakit] AS [id_penyakit], 
+      [penyakit_has_obat].[id_obat] AS [id_obat]
+      FROM [penyakit_has_obat] AS [penyakit_has_obat]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="user" EntityType="EHealthModel.Store.user" store:Type="Tables" />
+          <AssociationSet Name="FK_gambar_0_0" Association="EHealthModel.Store.FK_gambar_0_0">
+            <End Role="penyakit" EntitySet="penyakit" />
+            <End Role="gambar" EntitySet="gambar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_jejaring_sosial_0_0" Association="EHealthModel.Store.FK_jejaring_sosial_0_0">
+            <End Role="user" EntitySet="user" />
+            <End Role="jejaring_sosial" EntitySet="jejaring_sosial" />
+          </AssociationSet>
+          <AssociationSet Name="FK_langganan_jejaring_sosial_0_0" Association="EHealthModel.Store.FK_langganan_jejaring_sosial_0_0">
+            <End Role="user" EntitySet="user" />
+            <End Role="langganan_jejaring_sosial" EntitySet="langganan_jejaring_sosial" />
+          </AssociationSet>
+          <AssociationSet Name="FK_langganan_jejaring_sosial_1_0" Association="EHealthModel.Store.FK_langganan_jejaring_sosial_1_0">
+            <End Role="user" EntitySet="user" />
+            <End Role="langganan_jejaring_sosial" EntitySet="langganan_jejaring_sosial" />
+          </AssociationSet>
+          <AssociationSet Name="FK_penyakit_has_obat_0_0" Association="EHealthModel.Store.FK_penyakit_has_obat_0_0">
+            <End Role="obat" EntitySet="obat" />
+            <End Role="penyakit_has_obat" EntitySet="penyakit_has_obat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_penyakit_has_obat_1_0" Association="EHealthModel.Store.FK_penyakit_has_obat_1_0">
+            <End Role="penyakit" EntitySet="penyakit" />
+            <End Role="penyakit_has_obat" EntitySet="penyakit_has_obat" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="gambar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="file" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="deskripsi" Type="nvarchar" />
+          <Property Name="id_penyakit" Type="integer" Nullable="false" />
+        </EntityType>
+        <EntityType Name="jejaring_sosial">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="status" Type="nvarchar" Nullable="false" />
+          <Property Name="stamp" Type="datetime" Nullable="false" />
+          <Property Name="id_user" Type="integer" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'main.langganan_jejaring_sosial' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="langganan_jejaring_sosial">
+          <Key>
+            <PropertyRef Name="id_user_follower" />
+            <PropertyRef Name="id_user_following" />
+          </Key>
+          <Property Name="id_user_follower" Type="integer" Nullable="false" />
+          <Property Name="id_user_following" Type="integer" Nullable="false" />
+        </EntityType>
+        <EntityType Name="log_data">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="stamp" Type="datetime" Nullable="false" />
+          <Property Name="log_act" Type="nvarchar" Nullable="false" />
+          <Property Name="id_user" Type="integer" Nullable="false" />
+        </EntityType>
+        <EntityType Name="obat">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nama" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="keterangan" Type="nvarchar" />
+          <Property Name="dosis" Type="nvarchar" Nullable="false" />
+        </EntityType>
+        <EntityType Name="penyakit">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nama" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="penyebab" Type="nvarchar" Nullable="false" />
+          <Property Name="gejala" Type="nvarchar" Nullable="false" />
+          <Property Name="diagnosis" Type="nvarchar" Nullable="false" />
+          <Property Name="knowledge" Type="nvarchar" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'main.penyakit_has_obat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="penyakit_has_obat">
+          <Key>
+            <PropertyRef Name="id_penyakit" />
+            <PropertyRef Name="id_obat" />
+          </Key>
+          <Property Name="id_penyakit" Type="integer" Nullable="false" />
+          <Property Name="id_obat" Type="integer" Nullable="false" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nomor_sip" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="password" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="salt" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="nama" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="lokasi_penugasan" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="no_telp" Type="varchar" Nullable="false" />
+          <Property Name="role" Type="char" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <Association Name="FK_gambar_0_0">
+          <End Role="penyakit" Type="EHealthModel.Store.penyakit" Multiplicity="1" />
+          <End Role="gambar" Type="EHealthModel.Store.gambar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="penyakit">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="gambar">
+              <PropertyRef Name="id_penyakit" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_jejaring_sosial_0_0">
+          <End Role="user" Type="EHealthModel.Store.user" Multiplicity="1" />
+          <End Role="jejaring_sosial" Type="EHealthModel.Store.jejaring_sosial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="jejaring_sosial">
+              <PropertyRef Name="id_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_langganan_jejaring_sosial_0_0">
+          <End Role="user" Type="EHealthModel.Store.user" Multiplicity="1" />
+          <End Role="langganan_jejaring_sosial" Type="EHealthModel.Store.langganan_jejaring_sosial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="langganan_jejaring_sosial">
+              <PropertyRef Name="id_user_following" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_langganan_jejaring_sosial_1_0">
+          <End Role="user" Type="EHealthModel.Store.user" Multiplicity="1" />
+          <End Role="langganan_jejaring_sosial" Type="EHealthModel.Store.langganan_jejaring_sosial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="langganan_jejaring_sosial">
+              <PropertyRef Name="id_user_follower" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_penyakit_has_obat_0_0">
+          <End Role="obat" Type="EHealthModel.Store.obat" Multiplicity="1" />
+          <End Role="penyakit_has_obat" Type="EHealthModel.Store.penyakit_has_obat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="obat">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="penyakit_has_obat">
+              <PropertyRef Name="id_obat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_penyakit_has_obat_1_0">
+          <End Role="penyakit" Type="EHealthModel.Store.penyakit" Multiplicity="1" />
+          <End Role="penyakit_has_obat" Type="EHealthModel.Store.penyakit_has_obat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="penyakit">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="penyakit_has_obat">
+              <PropertyRef Name="id_penyakit" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EHealthModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EHealthContext" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="gambar" EntityType="EHealthModel.gambar" />
+          <EntitySet Name="jejaring_sosial" EntityType="EHealthModel.jejaring_sosial" />
+          <EntitySet Name="log_data" EntityType="EHealthModel.log_data" />
+          <EntitySet Name="obat" EntityType="EHealthModel.obat" />
+          <EntitySet Name="penyakit" EntityType="EHealthModel.penyakit" />
+          <EntitySet Name="user" EntityType="EHealthModel.user" />
+          <AssociationSet Name="FK_gambar_0_0" Association="EHealthModel.FK_gambar_0_0">
+            <End Role="penyakit" EntitySet="penyakit" />
+            <End Role="gambar" EntitySet="gambar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_jejaring_sosial_0_0" Association="EHealthModel.FK_jejaring_sosial_0_0">
+            <End Role="user" EntitySet="user" />
+            <End Role="jejaring_sosial" EntitySet="jejaring_sosial" />
+          </AssociationSet>
+          <AssociationSet Name="langganan_jejaring_sosial" Association="EHealthModel.langganan_jejaring_sosial">
+            <End Role="user" EntitySet="user" />
+            <End Role="user1" EntitySet="user" />
+          </AssociationSet>
+          <AssociationSet Name="penyakit_has_obat" Association="EHealthModel.penyakit_has_obat">
+            <End Role="obat" EntitySet="obat" />
+            <End Role="penyakit" EntitySet="penyakit" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="gambar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="file" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="deskripsi" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="id_penyakit" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="penyakit" Relationship="EHealthModel.FK_gambar_0_0" FromRole="gambar" ToRole="penyakit" />
+        </EntityType>
+        <EntityType Name="jejaring_sosial">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="status" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="id_user" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="user" Relationship="EHealthModel.FK_jejaring_sosial_0_0" FromRole="jejaring_sosial" ToRole="user" />
+        </EntityType>
+        <EntityType Name="log_data">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="stamp" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="log_act" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="id_user" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="obat">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nama" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="keterangan" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="dosis" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="penyakit" Relationship="EHealthModel.penyakit_has_obat" FromRole="obat" ToRole="penyakit" />
+        </EntityType>
+        <EntityType Name="penyakit">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nama" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="penyebab" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="gejala" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="diagnosis" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="knowledge" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="gambar" Relationship="EHealthModel.FK_gambar_0_0" FromRole="penyakit" ToRole="gambar" />
+          <NavigationProperty Name="obat" Relationship="EHealthModel.penyakit_has_obat" FromRole="penyakit" ToRole="obat" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nomor_sip" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="salt" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="nama" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="lokasi_penugasan" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="no_telp" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="role" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="jejaring_sosial" Relationship="EHealthModel.FK_jejaring_sosial_0_0" FromRole="user" ToRole="jejaring_sosial" />
+          <NavigationProperty Name="user1" Relationship="EHealthModel.langganan_jejaring_sosial" FromRole="user" ToRole="user1" />
+          <NavigationProperty Name="user2" Relationship="EHealthModel.langganan_jejaring_sosial" FromRole="user1" ToRole="user" />
+        </EntityType>
+        <Association Name="FK_gambar_0_0">
+          <End Role="penyakit" Type="EHealthModel.penyakit" Multiplicity="1" />
+          <End Role="gambar" Type="EHealthModel.gambar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="penyakit">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="gambar">
+              <PropertyRef Name="id_penyakit" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_jejaring_sosial_0_0">
+          <End Role="user" Type="EHealthModel.user" Multiplicity="1" />
+          <End Role="jejaring_sosial" Type="EHealthModel.jejaring_sosial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="jejaring_sosial">
+              <PropertyRef Name="id_user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="langganan_jejaring_sosial">
+          <End Role="user" Type="EHealthModel.user" Multiplicity="*" />
+          <End Role="user1" Type="EHealthModel.user" Multiplicity="*" />
+        </Association>
+        <Association Name="penyakit_has_obat">
+          <End Role="obat" Type="EHealthModel.obat" Multiplicity="*" />
+          <End Role="penyakit" Type="EHealthModel.penyakit" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EHealthModelStoreContainer" CdmEntityContainer="EHealthContext">
+          <EntitySetMapping Name="gambar">
+            <EntityTypeMapping TypeName="EHealthModel.gambar">
+              <MappingFragment StoreEntitySet="gambar">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="file" ColumnName="file" />
+                <ScalarProperty Name="deskripsi" ColumnName="deskripsi" />
+                <ScalarProperty Name="id_penyakit" ColumnName="id_penyakit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="jejaring_sosial">
+            <EntityTypeMapping TypeName="EHealthModel.jejaring_sosial">
+              <MappingFragment StoreEntitySet="jejaring_sosial">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="stamp" ColumnName="stamp" />
+                <ScalarProperty Name="id_user" ColumnName="id_user" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="log_data">
+            <EntityTypeMapping TypeName="EHealthModel.log_data">
+              <MappingFragment StoreEntitySet="log_data">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="stamp" ColumnName="stamp" />
+                <ScalarProperty Name="log_act" ColumnName="log_act" />
+                <ScalarProperty Name="id_user" ColumnName="id_user" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="obat">
+            <EntityTypeMapping TypeName="EHealthModel.obat">
+              <MappingFragment StoreEntitySet="obat">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nama" ColumnName="nama" />
+                <ScalarProperty Name="keterangan" ColumnName="keterangan" />
+                <ScalarProperty Name="dosis" ColumnName="dosis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="penyakit">
+            <EntityTypeMapping TypeName="EHealthModel.penyakit">
+              <MappingFragment StoreEntitySet="penyakit">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nama" ColumnName="nama" />
+                <ScalarProperty Name="penyebab" ColumnName="penyebab" />
+                <ScalarProperty Name="gejala" ColumnName="gejala" />
+                <ScalarProperty Name="diagnosis" ColumnName="diagnosis" />
+                <ScalarProperty Name="knowledge" ColumnName="knowledge" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user">
+            <EntityTypeMapping TypeName="EHealthModel.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nomor_sip" ColumnName="nomor_sip" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="salt" ColumnName="salt" />
+                <ScalarProperty Name="nama" ColumnName="nama" />
+                <ScalarProperty Name="lokasi_penugasan" ColumnName="lokasi_penugasan" />
+                <ScalarProperty Name="no_telp" ColumnName="no_telp" />
+                <ScalarProperty Name="role" ColumnName="role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="langganan_jejaring_sosial" TypeName="EHealthModel.langganan_jejaring_sosial" StoreEntitySet="langganan_jejaring_sosial">
+            <EndProperty Name="user">
+              <ScalarProperty Name="id" ColumnName="id_user_following" />
+            </EndProperty>
+            <EndProperty Name="user1">
+              <ScalarProperty Name="id" ColumnName="id_user_follower" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="penyakit_has_obat" TypeName="EHealthModel.penyakit_has_obat" StoreEntitySet="penyakit_has_obat">
+            <EndProperty Name="obat">
+              <ScalarProperty Name="id" ColumnName="id_obat" />
+            </EndProperty>
+            <EndProperty Name="penyakit">
+              <ScalarProperty Name="id" ColumnName="id_penyakit" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
