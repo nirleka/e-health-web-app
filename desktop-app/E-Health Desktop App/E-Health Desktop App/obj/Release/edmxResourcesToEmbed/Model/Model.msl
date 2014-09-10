@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EHealthModelStoreContainer" CdmEntityContainer="EHealthContext">
+    <EntitySetMapping Name="gambar">
+      <EntityTypeMapping TypeName="EHealthModel.gambar">
+        <MappingFragment StoreEntitySet="gambar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="file" ColumnName="file" />
+          <ScalarProperty Name="deskripsi" ColumnName="deskripsi" />
+          <ScalarProperty Name="id_penyakit" ColumnName="id_penyakit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jejaring_sosial">
+      <EntityTypeMapping TypeName="EHealthModel.jejaring_sosial">
+        <MappingFragment StoreEntitySet="jejaring_sosial">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="log_data">
+      <EntityTypeMapping TypeName="EHealthModel.log_data">
+        <MappingFragment StoreEntitySet="log_data">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="stamp" ColumnName="stamp" />
+          <ScalarProperty Name="log_act" ColumnName="log_act" />
+          <ScalarProperty Name="id_user" ColumnName="id_user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="obat">
+      <EntityTypeMapping TypeName="EHealthModel.obat">
+        <MappingFragment StoreEntitySet="obat">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nama" ColumnName="nama" />
+          <ScalarProperty Name="keterangan" ColumnName="keterangan" />
+          <ScalarProperty Name="dosis" ColumnName="dosis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="penyakit">
+      <EntityTypeMapping TypeName="EHealthModel.penyakit">
+        <MappingFragment StoreEntitySet="penyakit">
+          <ScalarProperty Name="medikasi" ColumnName="medikasi" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nama" ColumnName="nama" />
+          <ScalarProperty Name="penyebab" ColumnName="penyebab" />
+          <ScalarProperty Name="gejala" ColumnName="gejala" />
+          <ScalarProperty Name="diagnosis" ColumnName="diagnosis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="EHealthModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nomor_sip" ColumnName="nomor_sip" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="salt" ColumnName="salt" />
+          <ScalarProperty Name="nama" ColumnName="nama" />
+          <ScalarProperty Name="lokasi_penugasan" ColumnName="lokasi_penugasan" />
+          <ScalarProperty Name="no_telp" ColumnName="no_telp" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="langganan_jejaring_sosial" TypeName="EHealthModel.langganan_jejaring_sosial" StoreEntitySet="langganan_jejaring_sosial">
+      <EndProperty Name="user">
+        <ScalarProperty Name="id" ColumnName="id_user_following" />
+      </EndProperty>
+      <EndProperty Name="user1">
+        <ScalarProperty Name="id" ColumnName="id_user_follower" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="penyakit_has_obat" TypeName="EHealthModel.penyakit_has_obat" StoreEntitySet="penyakit_has_obat">
+      <EndProperty Name="obat">
+        <ScalarProperty Name="id" ColumnName="id_obat" />
+      </EndProperty>
+      <EndProperty Name="penyakit">
+        <ScalarProperty Name="id" ColumnName="id_penyakit" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

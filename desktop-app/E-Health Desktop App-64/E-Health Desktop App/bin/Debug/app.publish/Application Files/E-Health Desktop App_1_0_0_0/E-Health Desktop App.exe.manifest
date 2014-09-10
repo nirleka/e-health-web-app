@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="E-Health Desktop App.exe" version="1.0.0.0" publicKeyToken="9c83efb8207191e9" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="E-Health Desktop App" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="E-Health Desktop App.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="E-Health Desktop App.exe" size="56832">
+      <assemblyIdentity name="E-Health Desktop App" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>f2HpqfZIpEsdZ+hALajsB2GLKsWaCNfRLRncHlRQXaU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.dll" size="5185232">
+      <assemblyIdentity name="EntityFramework" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>EdmM9D7hw+9Ch7gZW/FJgfuv+sD79wajzQSp/0gdoQQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.SqlServer.dll" size="599760">
+      <assemblyIdentity name="EntityFramework.SqlServer" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>/rSpaCGzK6jlLMEE6y52x2eaaAG5QjTR+APHlf+hcoA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FirstFloor.ModernUI.dll" size="245760">
+      <assemblyIdentity name="FirstFloor.ModernUI" version="1.0.6.0" publicKeyToken="2D21EC3CD074C59A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>pppUcLQAVJi01IFppVIWjyzL2OWLCAWflwxtpg9vuTo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Data.SQLite.dll" size="274944">
+      <assemblyIdentity name="System.Data.SQLite" version="1.0.93.0" publicKeyToken="DB937BC2D44FF139" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>1+rHyqR3tCXOfjt9ziuY5iye9rpfaejWTAO8vTdwCrs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Data.SQLite.EF6.dll" size="183808">
+      <assemblyIdentity name="System.Data.SQLite.EF6" version="1.0.93.0" publicKeyToken="DB937BC2D44FF139" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>/7MKvzsCzzkR7f1z5SxkTB68SphfcPJ+AvNJI6GEHFA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Data.SQLite.Linq.dll" size="183808">
+      <assemblyIdentity name="System.Data.SQLite.Linq" version="1.0.93.0" publicKeyToken="DB937BC2D44FF139" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>zC1addrhPNJJM4Aq5L4HnvdLOpi/xb08HUsHMK0UOcE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="databases\raw.sql" size="5996">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Nin7NsgoGXkq/YHkjUD4TE6ElifoCIi0LpahkjifSq8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="E-Health Desktop App.exe.config" size="1514">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KIg/7EOoqzba1Mey6qkQJQ2L4JU9bbnLuFuC5Lt5qHs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="x64\SQLite.Interop.dll" size="1148928">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0/m7fyGq8+d3dbxEiFbNvCAwxL7SUH+R4Wm2SP6jsYo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="x86\SQLite.Interop.dll" size="993792">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MDiB8QzmSKv+a7keYBDWugqHW7JQvnuixkoi3kCLJpQ=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=NIR-PC\nirleka" issuerKeyHash="478b25e38b9e1e5457f35f4e7e2c03ef374e5535" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>1gClCQOgixUN8RpqmvQ2h+bgYgdkUbhnOw9krro1cp4=</DigestValue></Reference></SignedInfo><SignatureValue>aSQeNB/qfr7sVKaij+eS1dp9GiZrUi1UCYySUbJc9i9vV5S3UZccQX1q9KmZVFP+6XMVdbJ7Q7Ew8sydzZtkL9MxcMoeDZgS2pKd85bjY1uOKcgoRmPI80rhnKWTdUBHs5wjpiXkmuChXXm07UquDp4AVN2mJi5l2YuiWSiagVU=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>wT8gDLcY1WtRMFih7eCe7+v7cOs2RxGSm/v68QOdWD6RG3OIH01WZVqx9PdT3hQJbn/mCPomW+X1njKrlq+8aMt/QpjP1NiuVN4AsyShvSKTdX/CIH1g38bH0qmFINxEg6TWq7UhfVObM1gKa2ArRR+2P+awmCGgJ6Dp1/BtfsU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="9e7235baae640f3b67b851640762e0e68736f49a6a1af10d158ba00309a500d6" Description="" Url=""><as:assemblyIdentity name="E-Health Desktop App.exe" version="1.0.0.0" publicKeyToken="9c83efb8207191e9" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=NIR-PC\nirleka</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>qHp28bv8v51Duughb4/eWhip4tE2Qbx6VdKZtHnEnaE=</DigestValue></Reference></SignedInfo><SignatureValue>UJGgYJPHvT+zJh0nJdzMx70bf7zhDuc75Q2xyYmwRl2/y1b54EeJg121LM337T22bTvYRdPyFBJipD9ze/ds60JZ7D5RvFXFbDGTCyLPSf6rM32l9f1NnkCMuEJWrdPrgq4VmUCkznnDWSH64TYp+s/L9aXsg2HrwSxBRUP/MY4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>wT8gDLcY1WtRMFih7eCe7+v7cOs2RxGSm/v68QOdWD6RG3OIH01WZVqx9PdT3hQJbn/mCPomW+X1njKrlq+8aMt/QpjP1NiuVN4AsyShvSKTdX/CIH1g38bH0qmFINxEg6TWq7UhfVObM1gKa2ArRR+2P+awmCGgJ6Dp1/BtfsU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQJlutAxO7I7NBlT+fqQgWQjANBgkqhkiG9w0BAQsFADAnMSUwIwYDVQQDHhwATgBJAFIALQBQAEMAXABuAGkAcgBsAGUAawBhMB4XDTE0MDkwODE1MDQ0M1oXDTE1MDkwODIxMDQ0M1owJzElMCMGA1UEAx4cAE4ASQBSAC0AUABDAFwAbgBpAHIAbABlAGsAYTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwT8gDLcY1WtRMFih7eCe7+v7cOs2RxGSm/v68QOdWD6RG3OIH01WZVqx9PdT3hQJbn/mCPomW+X1njKrlq+8aMt/QpjP1NiuVN4AsyShvSKTdX/CIH1g38bH0qmFINxEg6TWq7UhfVObM1gKa2ArRR+2P+awmCGgJ6Dp1/BtfsUCAwEAATANBgkqhkiG9w0BAQsFAAOBgQAZG/1imPa497O6prn6uzEr/L97t2hv25O0rglHMdQ2H3fE3hbVDhwSF58ePxDMJ/fOHSdDsItiu1JmJZTtzwq5DcmRHswUthLfwdID2tlWyow8CPLzm/lxS3ClRqzk6f0o3kJmByWdg63PcTGEIwhm9URouUtTXagw0gHOfzE88Q==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

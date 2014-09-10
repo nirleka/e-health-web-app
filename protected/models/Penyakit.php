@@ -9,7 +9,7 @@
  * @property string $penyebab
  * @property string $gejala
  * @property string $diagnosis
- * @property string $knowledge
+ * @property string $medikasi
  *
  * The followings are the available model relations:
  * @property Obat[] $obats
@@ -34,9 +34,10 @@ class Penyakit extends EhealthActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('nama', 'unique'),
 			array('nama, penyebab, gejala, diagnosis', 'required'),
 			array('nama', 'length', 'max'=>50),
-			array('obatsIDs, nama, gejala, diagnosis, knowledge, penyebab', 'safe'),
+			array('obatsIDs, nama, gejala, diagnosis, medikasi, penyebab', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, nama, penyebab, gejala, diagnosis', 'safe', 'on'=>'search'),
@@ -89,12 +90,12 @@ class Penyakit extends EhealthActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'nama' => 'Nama',
-			'penyebab' => 'Penyebab',
-			'gejala' => 'Gejala',
-			'diagnosis' => 'Diagnosis',
-			'knowledge' => 'Knowledge',
-			'obatsIDs' => 'Daftar Obat',
+			'nama' => 'Nama Penyakit',
+			'penyebab' => 'Penyebab Penyakit',
+			'gejala' => 'Gejala Penyakit',
+			'diagnosis' => 'Diagnosis Penyakit',
+			'medikasi' => 'Medikasi Penyakit',
+			'obatsIDs' => 'Daftar Obat Penyakit',
 		);
 	}
 
@@ -120,7 +121,7 @@ class Penyakit extends EhealthActiveRecord
 		$criteria->compare('penyebab',$this->penyebab,true);
 		$criteria->compare('gejala',$this->gejala,true);
 		$criteria->compare('diagnosis',$this->diagnosis,true);
-		$criteria->compare('knowledge',$this->diagnosis,true);
+		$criteria->compare('medikasi',$this->diagnosis,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

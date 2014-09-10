@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"List",
+				"listData"
+			],
+			[
+				"id_p",
+				"id_penyakit"
+			],
+			[
 				"kode_un",
 				"kode_unker"
 			],
@@ -506,25 +514,57 @@
 			[
 				"Data_Peni",
 				"Data_Penilaian_Kompetensi"
-			],
-			[
-				"field",
-				"fieldLabel"
-			],
-			[
-				"fiel",
-				"fieldLabel"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "",
+			"file": "protected/views/penyakit/_form.php",
 			"settings":
 			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
+				"buffer_size": 2015,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "protected/controllers/PenyakitController.php",
+			"settings":
+			{
+				"buffer_size": 4510,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "protected/views/layouts/main.php",
+			"settings":
+			{
+				"buffer_size": 2403,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "protected/models/Penyakit.php",
+			"settings":
+			{
+				"buffer_size": 3841,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "protected/models/Obat.php",
+			"settings":
+			{
+				"buffer_size": 2817,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "protected/controllers/ObatController.php",
+			"settings":
+			{
+				"buffer_size": 4077,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -688,6 +728,28 @@
 	},
 	"file_history":
 	[
+		"/F/htdocs/TA/e-health/protected/views/penyakit/view.php",
+		"/F/htdocs/TA/e-health/assets/9ae8e0aa/js/main.js",
+		"/F/htdocs/TA/e-health/assets/9ae8e0aa/css/main.css",
+		"/F/htdocs/TA/e-health/protected/config/main.php",
+		"/F/htdocs/TA/e-health/protected/views/penyakit/update.php",
+		"/F/htdocs/TA/e-health/protected/views/penyakit/create.php",
+		"/F/htdocs/TA/e-health/protected/views/obat/_form.php",
+		"/F/htdocs/TA/e-health/protected/views/obat/admin.php",
+		"/F/htdocs/TA/e-health/desktop-app/E-Health Desktop App/E-Health Desktop App/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs",
+		"/F/htdocs/TA/e-health/desktop-app/E-Health Desktop App/E-Health Desktop App/obj/Debug/E-Health Desktop App.csproj.FileListAbsolute.txt",
+		"/F/htdocs/TA/e-health/yii/vendors/htmlpurifier/standalone/HTMLPurifier/ConfigSchema/schema/Output.SortAttr.txt",
+		"/F/htdocs/TA/e-health/desktop-app/E-Health Desktop App/E-Health Desktop App/obj/Debug/Pages/Settings/About.baml",
+		"/F/htdocs/TA/e-health/protected/models/Obat.php",
+		"/F/htdocs/TA/e-health/protected/views/penyakit/_view.php",
+		"/F/htdocs/TA/e-health/protected/views/obat/update.php",
+		"/F/htdocs/TA/e-health/yii/i18n/data/ur_pk.php",
+		"/F/htdocs/TA/e-health/protected/models/User.php",
+		"/F/htdocs/TA/e-health/protected/models/LoginForm.php",
+		"/F/htdocs/TA/e-health/css/form.css",
+		"/F/htdocs/TA/e-health/css/main.css",
+		"/F/htdocs/TA/e-health/protected/models/Penyakit.php",
+		"/F/htdocs/TA/e-health/package.json",
 		"/F/htdocs/hcis_perumnas/db/penggajian/2014-08-19-update.sql",
 		"/F/htdocs/hcis_perumnas/application/controllers/pph21/pph21.php",
 		"/F/htdocs/hcis_perumnas/application/helpers/dompdf/include/cpdf_adapter.cls.php",
@@ -793,29 +855,7 @@
 		"/F/htdocs/hcis_perumnas/index.php",
 		"/F/htdocs/hcis_perumnas/application/views/layanan/impasing_nominatif_pdf.php",
 		"/F/htdocs/hcis_perumnas/application/views/absensi/absensi_ketidakhadiran_view.php",
-		"/F/htdocs/hcis_perumnas/application/views/layanan/kenaikan_pangkat_tanda_terima_pdf.php",
-		"/F/htdocs/hcis_perumnas/application/views/penggajian/slipgaji_view.php",
-		"/F/htdocs/hcis_perumnas/application/views/absensi/allfunc_view.php",
-		"/F/htdocs/hcis_perumnas/application/third_party/PHPExcel/locale/en/uk/config",
-		"/F/htdocs/hcis_perumnas/application/views/pengguna_login_ubahsandi.php",
-		"/F/htdocs/hcis_perumnas/application/views/penggajian/uang_makan_view.php",
-		"/F/htdocs/hcis_perumnas/application/views/penggajian/transport_view.php",
-		"/F/htdocs/hcis_perumnas/application/views/dashboard_view.php",
-		"/F/htdocs/hcis_perumnas/application/views/dashboard_fn.php",
-		"/F/htdocs/hcis_perumnas/application/controllers/penggajian/pensiun.php",
-		"/F/htdocs/hcis_perumnas/application/models/tunjanganresiko_model.php",
-		"/F/htdocs/hcis_perumnas/application/controllers/rest/RefNatural.php",
-		"/F/htdocs/hcis_perumnas/application/controllers/rest/RefDataKeluarga.php",
-		"/F/htdocs/hcis_perumnas/application/views/kompetensi/pelatihan.php",
-		"/F/htdocs/hcis_perumnas/TableCSSCodeRounded.css",
-		"/F/htdocs/hcis_perumnas/assets/js/ext/ux/TabReorderer.js",
-		"/F/htdocs/hcis_perumnas/application/views/bantuan/uangduka_sk_pdf.php",
-		"/F/htdocs/hcis_perumnas/application/views/pph21/pph21_view.php",
-		"/F/htdocs/hcis_perumnas/application/views/penggajian/pph21_view.php",
-		"/F/htdocs/hcis_perumnas/application/controllers/rest/RefTunjanganLain.php",
-		"/F/htdocs/hcis_perumnas/application/controllers/diklat/pddk_formal.php",
-		"/F/htdocs/hcis_perumnas/application/views/print_dialog_view.php",
-		"/F/htdocs/hcis_perumnas/db/fix_view.sql"
+		"/F/htdocs/hcis_perumnas/application/views/layanan/kenaikan_pangkat_tanda_terima_pdf.php"
 	],
 	"find":
 	{
@@ -867,6 +907,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"obatsID",
 			"$month != \"12\"",
 			"insert",
 			"loadDataSesuaiTab",
@@ -993,8 +1034,7 @@
 			"var periode:",
 			" var periode:",
 			".getProxy().extraParams",
-			"var periode",
-			"getPeriodeAktif"
+			"var periode"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1002,6 +1042,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"obatsIDs",
 			"var kode_unker = ",
 			"var periode = ",
 			" var periode = ",
@@ -1128,8 +1169,7 @@
 			"nama_jab",
 			"selJabatan",
 			"Data_Daftar_Pangkat",
-			"FTambahDiklatKompetensi",
-			"id_kategori_kompetensi"
+			"FTambahDiklatKompetensi"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1140,29 +1180,29 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "protected/views/penyakit/_form.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 2015,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1851,
+								1851
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
-							"auto_name": "",
 							"bh_regions":
 							[
 								"bh_default",
@@ -1222,13 +1262,459 @@
 								"bh_tag_content"
 							],
 							"is_xml": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 264.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "protected/controllers/PenyakitController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4510,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2133,
+								2133
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1589.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "protected/views/layouts/main.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2403,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1315,
+								1315
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 342.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "protected/models/Penyakit.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3841,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2438,
+								2438
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1440.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "protected/models/Obat.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2817,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1201,
+								1201
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 858.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "protected/controllers/ObatController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4077,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1741,
+								1741
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1452.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1276,7 +1762,7 @@
 	"project": "e-health.sublime-project",
 	"replace":
 	{
-		"height": 56.0
+		"height": 83.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1284,6 +1770,70 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"penyakit.php",
+				"protected\\models\\Penyakit.php"
+			],
+			[
+				"main",
+				"protected\\views\\layouts\\main.php"
+			],
+			[
+				"obatform",
+				"protected\\views\\obat\\_form.php"
+			],
+			[
+				"obatcon",
+				"protected\\controllers\\ObatController.php"
+			],
+			[
+				"oba",
+				"protected\\models\\Obat.php"
+			],
+			[
+				"penyakitv",
+				"protected\\views\\penyakit\\view.php"
+			],
+			[
+				"obat",
+				"protected\\models\\Obat.php"
+			],
+			[
+				"update",
+				"protected\\views\\penyakit\\update.php"
+			],
+			[
+				"penyakitcreate",
+				"protected\\views\\penyakit\\create.php"
+			],
+			[
+				"penyakitform",
+				"protected\\views\\penyakit\\_form.php"
+			],
+			[
+				"obat.",
+				"protected\\models\\Obat.php"
+			],
+			[
+				"obata",
+				"protected\\views\\obat\\admin.php"
+			],
+			[
+				"penyaki",
+				"protected\\controllers\\PenyakitController.php"
+			],
+			[
+				"main.php",
+				"protected\\config\\main.php"
+			],
+			[
+				"penyakit.",
+				"protected\\models\\Penyakit.php"
+			],
+			[
+				"penyakit/form",
+				"protected\\views\\penyakit\\_form.php"
+			],
 			[
 				"refpph21",
 				"application\\controllers\\rest\\RefPph21.php"
@@ -1475,10 +2025,6 @@
 			[
 				"update.sq",
 				"db\\update.sql"
-			],
-			[
-				"update",
-				"application\\helpers\\dompdf\\include\\cpdf_adapter.cls.php"
 			],
 			[
 				"gajipegawa",
@@ -1735,66 +2281,6 @@
 			[
 				"rekapitulai",
 				"D:\\htdocs\\simpeg_pln\\application\\models\\report\\rekapitulasi_gaji_pdf.php"
-			],
-			[
-				"refsli",
-				"application\\controllers\\rest\\RefSlipGaji.php"
-			],
-			[
-				"kenaikan_pangkat_view",
-				"application\\views\\layanan\\kenaikan_pangkat_view.php"
-			],
-			[
-				"layanan",
-				"application\\views\\layanan\\cuti_nominatif_pdf.php"
-			],
-			[
-				"abst",
-				"simpeg_pln\\application\\models\\report\\abstract_report.php"
-			],
-			[
-				"/slip_gaji_pdf",
-				"simpeg_pln\\application\\models\\report\\slip_gaji_pdf.php"
-			],
-			[
-				"abstract_report",
-				"simpeg_pln\\application\\models\\report\\abstract_report.php"
-			],
-			[
-				"rekapitu",
-				"simpeg_pln\\application\\models\\report\\rekapitulasi_gaji_pdf.php"
-			],
-			[
-				"abstra",
-				"simpeg_pln\\application\\models\\report\\abstract_report.php"
-			],
-			[
-				"slip_gaji_pd",
-				"simpeg_pln\\application\\models\\report\\slip_gaji_pdf.php"
-			],
-			[
-				"slip_gaji",
-				"simpeg_pln\\application\\views\\penggajian\\param_gaji_view.php"
-			],
-			[
-				"slip",
-				"simpeg_pln\\application\\models\\report\\slip_gaji_pdf.php"
-			],
-			[
-				"slip_gaji_viw",
-				"simpeg_pln\\application\\views\\penggajian\\param_gaji_view.php"
-			],
-			[
-				"abstrac",
-				"simpeg_pln\\application\\models\\report\\abstract_report.php"
-			],
-			[
-				"abstract_re",
-				"simpeg_pln\\application\\models\\report\\abstract_report.php"
-			],
-			[
-				"rekapi",
-				"simpeg_pln\\application\\models\\report\\rekapitulasi_gaji_pdf.php"
 			]
 		],
 		"width": 0.0
@@ -1821,7 +2307,7 @@
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 358.0,
 	"status_bar_visible": true,
 	"template_settings":

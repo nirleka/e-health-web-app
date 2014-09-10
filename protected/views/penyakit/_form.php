@@ -44,9 +44,9 @@ $this->widget(
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'knowledge'); ?>
-		<?php echo $form->textArea($model,'knowledge',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'knowledge'); ?>
+		<?php echo $form->labelEx($model,'medikasi'); ?>
+		<?php echo $form->textArea($model,'medikasi',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'medikasi'); ?>
 	</div>
 
 	<div class="row">

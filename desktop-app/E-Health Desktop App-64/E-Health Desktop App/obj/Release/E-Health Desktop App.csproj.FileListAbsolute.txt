@@ -1,0 +1,81 @@
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\databases\e-health.sqlite
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\e-health.sqlite
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\x64\SQLite.Interop.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\x86\SQLite.Interop.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\E-Health Desktop App.exe.config
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\E-Health Desktop App.exe.manifest
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\E-Health Desktop App.application
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\E-Health Desktop App.exe
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\E-Health Desktop App.pdb
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\EntityFramework.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\FirstFloor.ModernUI.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\System.Data.Entity.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\System.Data.Linq.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\System.Data.SQLite.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\System.Data.SQLite.EF6.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\System.Data.SQLite.Linq.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\FirstFloor.ModernUI.xml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\System.Data.SQLite.pdb
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\System.Data.SQLite.EF6.pdb
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\bin\Release\System.Data.SQLite.Linq.pdb
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\MainWindow.baml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\Pages\Login.baml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\Pages\Settings\About.baml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\Pages\Settings\Appearance.baml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\Pages\Home.baml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\Pages\SettingsPage.baml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\App.baml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\MainWindow.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\Pages\Login.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\Pages\Settings\About.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\Pages\Settings\Appearance.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\Pages\Home.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\Pages\SettingsPage.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\App.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\E-Health Desktop App_Content.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\E-Health Desktop App_MarkupCompile.cache
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\E-Health Desktop App.g.resources
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\E-Health Desktop App.exe.manifest
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\E-Health Desktop App.application
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\E-Health Desktop App.exe
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App\E-Health Desktop App\obj\Release\E-Health Desktop App.pdb
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\databases\e-health.sqlite
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\e-health.sqlite
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\x64\SQLite.Interop.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\x86\SQLite.Interop.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\E-Health Desktop App.exe.config
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\E-Health Desktop App.exe.manifest
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\E-Health Desktop App.application
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\E-Health Desktop App.exe
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\E-Health Desktop App.pdb
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\EntityFramework.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\FirstFloor.ModernUI.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\System.Data.SQLite.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\System.Data.SQLite.EF6.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\FirstFloor.ModernUI.xml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\System.Data.SQLite.xml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\System.Data.SQLite.EF6.pdb
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\MainWindow.baml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\Pages\Login.baml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\Pages\Settings\About.baml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\Pages\Settings\Appearance.baml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\Pages\Home.baml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\Pages\SettingsPage.baml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\App.baml
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\MainWindow.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\Pages\Login.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\Pages\Settings\About.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\Pages\Settings\Appearance.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\Pages\Home.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\Pages\SettingsPage.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\App.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\E-Health Desktop App_Content.g.cs
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\E-Health Desktop App_MarkupCompile.cache
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\E-Health Desktop App.g.resources
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\E-Health Desktop App.exe.manifest
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\E-Health Desktop App.application
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\E-Health Desktop App.exe
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\obj\Release\E-Health Desktop App.pdb
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\System.Data.Linq.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\System.Data.SQLite.Linq.dll
+F:\htdocs\TA\e-health\desktop-app\E-Health Desktop App-64\E-Health Desktop App\bin\Release\System.Data.SQLite.Linq.pdb
